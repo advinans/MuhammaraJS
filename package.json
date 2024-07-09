@@ -57,7 +57,7 @@
     "module_path": "./binding",
     "remote_path": "julianhille/MuhammaraJS/releases/download/{version}",
     "host": "https://github.com",
-    "package_name": "{node_abi}-{platform}-{arch}-{libc}.tar.gz"
+    "package_name": "{node_abi}-{platform}-{arch}-{musl}.tar.gz"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
