@@ -11,7 +11,7 @@
     "node": ">=17"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build ${EXTRA_NODE_PRE_GYP_FLAGS:-\"\"}",
+    "install": "node-pre-gyp install --fallback-to-build --target_libc=musl ${EXTRA_NODE_PRE_GYP_FLAGS:-\"\"}",
     "test": "mocha -R tap ./tests/*.js ./tests/**/*.js --timeout 15000",
     "test:codestyle": "npx prettier -c ./",
     "test:electron": "electron-mocha -R tap ./tests/*.js --timeout 15000",
@@ -57,7 +57,7 @@
     "module_path": "./binding",
     "remote_path": "julianhille/MuhammaraJS/releases/download/{version}",
     "host": "https://github.com",
-    "package_name": "{node_abi}-{platform}-{arch}-{musl}.tar.gz"
+    "package_name": "{node_abi}-{platform}-{arch}-{libc}.tar.gz"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
